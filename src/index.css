@@ -1,0 +1,120 @@
+:root {
+  --clr-red: rgb(176, 37, 24);
+  /* --clr-red: rgb(119, 0, 26); */
+  --clr-mustard: rgb(222, 176, 60);
+  --clr-yellow: rgb(242, 218, 112);
+  --clr-blue: rgb(116, 167, 176);
+  --clr-beige: rgb(246, 243, 223);
+  --clr-accent-green: rgb(164, 220, 166);
+  --overlay-color: rgba(0, 0, 0, 0.5);
+}
+
+body {
+  font-family: 'Bodoni Moda', serif;
+}
+
+/*
+Navbar
+*/
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 900;
+  color: var(--clr-yellow);
+  text-align: center;
+}
+
+/*
+Hero Image
+*/
+
+.hero {
+  position: relative;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 5vw;
+  width: 90vw;
+  height: 100%;
+  background-color: var(--overlay-color);
+}
+
+.top-left {
+  position: absolute;
+  top: 32%;
+  left: 15%;
+}
+
+.stoop-sign {
+  font-size: 72px;
+  font-weight: 900;
+  color: var(--clr-beige);
+}
+.accent {
+  color: var(--clr-blue);
+}
+.bottom-right {
+  position: absolute;
+  bottom: 10px;
+  right: 100px;
+}
+
+.date-time p {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--clr-mustard);
+}
+
+/*
+Description
+*/
+
+.description {
+  font-size: 22px;
+}
+.address {
+  padding: 0 5px;
+}
+
+/*
+Footer
+*/
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: var(--clr-blue);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 30px;
+}
+
+footer p {
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+.share-icons {
+  display: flex;
+}
+
+.twitter,
+.instagram,
+.facebook {
+  padding-right: 5px;
+}

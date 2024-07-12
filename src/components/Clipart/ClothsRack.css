@@ -1,0 +1,24 @@
+@keyframes rotateTowel {
+  from {
+    transform: translate(-42.426406px, -1.5909902px) rotate(5deg);
+  }
+  to {
+    transform: translate(-42.426406px, -1.5909902px) rotate(-5deg);
+  }
+}
+@keyframes rotateCoat {
+  from {
+    transform: translate(-1966.2668px, -289.75337px) rotate(5deg);
+  }
+  to {
+    transform: translate(-1966.2668px, -289.75337px) rotate(-5deg);
+  }
+}
+@keyframes rotateShirt {
+  from {
+    transform: translate(-164.66749px, 8.2201165px) rotate(5deg);
+  }
+  to {
+    transform: translate(-164.66749px, 8.2201165px) rotate(-5deg);
+  }
+}
