@@ -14,6 +14,53 @@ body {
 }
 
 /*
+Audio Button Play
+*/
+
+.btn-play {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-right: 25px;
+  background: none;
+  border: 2px solid var(--clr-blue);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.btn-play:hover {
+  transform: scale(1.2);
+}
+
+.btn-play svg {
+  fill: var(--clr-red);
+}
+
+/*
+Audio Button Pause
+*/
+.btn-pause {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-right: 25px;
+  background: none;
+  border: 2px solid var(--clr-red);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.btn-pause:hover {
+  transform: scale(1.2);
+}
+
+.btn-pause svg {
+  fill: var(--clr-accent-green);
+}
+
+/*
 Navbar
 */
 
@@ -83,10 +130,19 @@ Description
 */
 
 .description {
-  font-size: 22px;
+  font-size: 20px;
 }
 .address {
+  color: var(--clr-blue);
+  font-size: 18px;
+  text-decoration: underline;
+  text-decoration-color: var(--clr-blue);
   padding: 0 5px;
+  transition: transform 0.3s ease;
+}
+.address:hover {
+  font-weight: 700;
+  transform: scale(1.2);
 }
 
 /*
