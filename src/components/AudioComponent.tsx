@@ -32,7 +32,7 @@ const AudioComponent: React.FC = () => {
   return (
     <div>
       {!isPlaying ? (
-        <button className="btn-play" onClick={playAudio}>
+        <button className="btn play" onClick={playAudio}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -44,7 +44,7 @@ const AudioComponent: React.FC = () => {
           </svg>
         </button>
       ) : (
-        <button className="btn-pause" onClick={stopAudio}>
+        <button className="btn pause" onClick={stopAudio}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

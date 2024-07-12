@@ -14,10 +14,14 @@ body {
 }
 
 /*
+Media Queries
+*/
+
+/*
 Audio Button Play
 */
 
-.btn-play {
+.btn {
   display: flex;
   align-items: center;
   padding: 10px;
@@ -29,34 +33,28 @@ Audio Button Play
   transition: transform 0.3s ease;
 }
 
-.btn-play:hover {
+.play:hover {
   transform: scale(1.2);
 }
 
-.btn-play svg {
+.play svg {
   fill: var(--clr-red);
 }
 
 /*
 Audio Button Pause
 */
-.btn-pause {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  margin-right: 25px;
-  background: none;
+
+.pause {
   border: 2px solid var(--clr-red);
-  border-radius: 50%;
-  cursor: pointer;
   transition: transform 0.3s ease;
 }
 
-.btn-pause:hover {
+.pause:hover {
   transform: scale(1.2);
 }
 
-.btn-pause svg {
+.pause svg {
   fill: var(--clr-accent-green);
 }
 
@@ -173,4 +171,45 @@ footer p {
 .instagram,
 .facebook {
   padding-right: 5px;
+}
+
+/* Small devices (mobile phones) */
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 32px;
+    padding: 10px;
+  }
+
+  .play,
+  .pause {
+    margin-right: 20px;
+  }
+
+  .description {
+    flex-direction: column;
+  }
+
+  .stoop-sign {
+    font-size: 36px;
+  }
+
+  .top-left {
+    top: 11%;
+  }
+
+  .date-time p {
+    font-size: 18px;
+  }
+
+  .bottom-right {
+    right: 50px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .address {
+    font-size: 14px;
+  }
 }

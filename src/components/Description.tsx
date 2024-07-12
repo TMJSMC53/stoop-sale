@@ -1,11 +1,38 @@
 import './Description.css';
 import RubySlippers from './Clipart/RubySlippers';
 import ClothsRack from './Clipart/ClothsRack';
-
 import { useRef } from 'react';
+import useMediaQuery from './useMediaQuery';
 
-export default function Description() {
+const Description: React.FC = () => {
   const dialogRef = useRef<HTMLDialogElement>(null);
+  const isMobile = useMediaQuery('(max-width: 600px)');
+
+  const containerStyle: React.CSSProperties = {
+    display: 'flex',
+    flexDirection: isMobile ? 'column' : 'row',
+    padding: '1rem 0',
+  };
+
+  const clothsRackStyle: React.CSSProperties = {
+    flex: 1,
+    height: '25vh',
+    width: '75%',
+  };
+
+  const descriptionStyle: React.CSSProperties = {
+    flex: 1,
+    alignContent: 'center',
+    textAlign: 'center',
+    padding: isMobile ? '0.5rem' : '1rem', // Example of adjusting padding based on screen size
+  };
+
+  const rubySlippersStyle: React.CSSProperties = {
+    flex: 1,
+    height: '25vh',
+    width: '50%',
+    margin: 'auto',
+  };
 
   return (
     <>
@@ -41,12 +68,13 @@ export default function Description() {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </dialog>
-      <div style={{ display: 'flex', flexDirection: 'row', padding: '1rem 0' }}>
-        <ClothsRack height={'25vh'} style={{ flex: 1 }} />
-        <p
-          className="description"
-          style={{ flex: 1, alignContent: 'center', textAlign: 'center' }}
-        >
+      <div style={containerStyle}>
+        <ClothsRack
+          className="close-rack-mobile"
+          height={'25vh'}
+          style={clothsRackStyle}
+        />
+        <p className="description" style={descriptionStyle}>
           Join us at the corner of
           <a
             className="address"
@@ -58,8 +86,11 @@ export default function Description() {
           for a lively stoop sale! Enjoy mingling with neighbors, browsing
           unique items, and finding your next favorite treasure.
         </p>
-        <RubySlippers height={'25vh'} style={{ flex: 1 }} />
+        <RubySlippers height={'25vh'} style={rubySlippersStyle} />
       </div>
     </>
   );
-}
+};
+
+export default Description;
+
