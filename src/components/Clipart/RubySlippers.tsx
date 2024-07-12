@@ -22,7 +22,7 @@ export default function RubySlippers({
   useEffect(() => {
     if (clickCount % 3 === 0 && clickCount !== 0) {
       const timeout = setTimeout(() => {
-        alert("There's no place like home!");
+        alert("There's no place like Brooklyn!");
       }, 550);
 
       return () => {
